@@ -245,6 +245,10 @@ RE.setBlockquote = function() {
     document.execCommand('formatBlock', false, '<blockquote>');
 };
 
+RE.setHashtag = function() {
+    document.execCommand('formatBlock', false, '<div class="author tag">');
+};
+
 RE.insertHTML = function(html) {
     RE.restorerange();
     document.execCommand('insertHTML', false, html);
