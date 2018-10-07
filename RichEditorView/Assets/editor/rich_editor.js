@@ -196,7 +196,8 @@ RE.setHeading = function(heading) {
 };
 
 RE.setIndent = function() {
-    document.execCommand('indent', false, null);
+    //document.execCommand('indent', false, null);
+    document.execCommand('formatBlock', false, '<div class="author tag">');
 };
 
 RE.setOutdent = function() {
