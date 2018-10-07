@@ -308,6 +308,10 @@ import UIKit
         runJS("RE.setBlockquote()");
     }
     
+    public func hashtag() {
+        runJS("RE.setHashtag()");
+    }
+    
     public func alignLeft() {
         runJS("RE.setJustifyLeft();")
     }
