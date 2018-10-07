@@ -62,15 +62,21 @@ div {
 
 .tag {
     border: none;
-    padding: 5.5px 9.5px 4px 9px;
+    padding-top: .2em !important;
+    padding-bottom: .2em !important;
+    padding-right: .5em;
+    padding-left: .5em;
+    height: 20px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-    font-size: 12px;
-    font-family: $font_family;
-    margin: 4px 2px;
+    font-size: 13px;
+    font-family: 'HelveticaNeue';
     color: #0c3047;
 }
+.tagtext {
+    margin-top: -4px;
+}
 .hash {border-radius: 20px; background-color: #7dabb2;}
-.author {border-radius: 20px; background-color: #409447;}
+.author {border-radius: 10px; background-color: #409447;}

@@ -247,7 +247,23 @@ RE.setBlockquote = function() {
 };
 
 RE.setHashtag = function() {
-    document.execCommand('formatBlock', false, '<div class="author tag">');
+    RE.restorerange();
+    var sel = document.getSelection();
+    if (sel.toString().length !== 0) {
+        if (sel.rangeCount) {
+            var tagtext = document.createElement("div");
+            tagtext.setAttribute("class", "tagtext")
+            var range = sel.getRangeAt(0).cloneRange();
+            range.surroundContents(tagtext);
+            var mytag = document.createElement("div");
+            mytag.setAttribute("class", "author tag");
+            range.surroundContents(mytag)
+            sel.removeAllRanges();
+            sel.addRange(range);
+            RE.setCursorAfterElement(mytag)
+        }
+    }
+    RE.callback("input");
 };
 
 RE.insertHTML = function(html) {
