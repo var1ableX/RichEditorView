@@ -305,11 +305,12 @@ import UIKit
     }
 
     public func blockquote() {
-        runJS("RE.setBlockquote()");
+        //runJS("RE.setBlockquote();")
+        runJS("RE.setHashtag();");
     }
     
     public func hashtag() {
-        runJS("RE.setHashtag()");
+        runJS("RE.setHashtag();")
     }
     
     public func alignLeft() {
